@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(dirname),
   },
-  output: 'standalone',
+  output: process.env.VERCEL ? undefined : 'standalone',
   images: {
     loader: 'custom',
     loaderFile: './figma-image-loader.ts',
@@ -72,7 +72,13 @@ const nextConfig: NextConfig = {
     },
   },
   env: {
-    NEXT_PUBLIC_SITE_URL: process.env.FIGMA_PUBLIC_URL || 'http://localhost:3000',
+    NEXT_PUBLIC_SITE_URL:
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : process.env.VERCEL_URL
+          ? `https://${process.env.VERCEL_URL}`
+          : process.env.FIGMA_PUBLIC_URL || 'http://localhost:3000'),
     // NOTE: Do not add FIGMA_OAUTH_CLIENT_SECRET, FIGMA_CONTENT_API_ACCESS_KEY,
     // or any other credential here. Values placed in `env` are inlined into
     // the JavaScript bundle by Next.js at build time and become readable by

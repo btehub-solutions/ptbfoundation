@@ -4,17 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "NODE_OPTIONS=--no-deprecation next dev --port ${PORT:-3000} --hostname 0.0.0.0",
-    "build": "NODE_OPTIONS=--no-deprecation payload build",
-    "start": "NODE_OPTIONS=--no-deprecation next start",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "format": "oxfmt",
     "typecheck": "tsc --noEmit",
     "test:e2e": "playwright test",
-    "generate:importmap": "NODE_OPTIONS=--no-deprecation payload generate:importmap",
-    "generate:types": "NODE_OPTIONS=--no-deprecation payload generate:types",
-    "payload": "NODE_OPTIONS=--no-deprecation payload"
+    "generate:importmap": "payload generate:importmap",
+    "generate:types": "payload generate:types",
+    "payload": "payload"
   },
   "dependencies": {
+    "@payloadcms/db-postgres": "4.0.0-beta.4",
     "@payloadcms/figma": "1.0.0-beta.1",
     "@payloadcms/next": "4.0.0-beta.4",
     "@payloadcms/plugin-cloud-storage": "4.0.0-beta.4",
