@@ -5,7 +5,6 @@ dist/
 build/
 .cache/
 .env*
-!.env.example
 next-env.d.ts
 *.tsbuildinfo
 *-debug.log*
