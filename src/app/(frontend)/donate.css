@@ -1,0 +1,330 @@
+.donate-page {
+  color: var(--color-gallery-ink);
+  background: white;
+}
+.donate-hero-copy {
+  padding-inline: 24px;
+}
+.donation-section {
+  padding: 88px 0 105px;
+  background: linear-gradient(180deg, white 0%, var(--color-gallery-mint) 100%);
+}
+.donation-container {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(500px, 1.18fr);
+  align-items: start;
+  gap: 84px;
+  width: calc(100% - 176px);
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.donation-introduction {
+  padding-top: 15px;
+}
+.donation-introduction h2 {
+  margin-top: 22px;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+.donation-introduction > p {
+  margin-top: 24px;
+  max-width: 450px;
+  color: var(--color-gallery-muted);
+  font-size: 16px;
+  line-height: 28px;
+}
+.donation-purpose-list {
+  display: grid;
+  margin-top: 32px;
+  border-top: 1px solid var(--color-gallery-line);
+}
+.donation-purpose-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--color-gallery-line);
+  font-size: 15px;
+  line-height: 25px;
+}
+.donation-work-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  color: var(--color-foundation-green);
+  font-size: 15px;
+  font-weight: 500;
+}
+.bank-transfer-panel {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  padding: 38px;
+  border: 1px solid var(--color-gallery-line);
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 24px 70px rgb(0 45 7 / 9%);
+}
+.bank-transfer-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: var(--color-foundation-gold);
+}
+.bank-transfer-heading > p {
+  color: var(--color-foundation-green);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+.bank-transfer-heading h3 {
+  margin-top: 9px;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+.bank-transfer-heading > span {
+  display: block;
+  margin-top: 8px;
+  color: var(--color-gallery-muted);
+  font-size: 14px;
+}
+.bank-identity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 23px 0;
+  margin-top: 26px;
+  border-block: 1px solid var(--color-gallery-line);
+}
+.bank-identity > div {
+  display: grid;
+  gap: 7px;
+}
+.bank-identity span,
+.bank-account-number > span {
+  color: var(--color-gallery-muted);
+  font-size: 12px;
+  line-height: 20px;
+}
+.bank-identity strong {
+  font-size: 15px;
+  line-height: 24px;
+}
+.bank-identity button,
+.bank-account-card button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 8px;
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 1px solid var(--color-gallery-line);
+  border-radius: 999px;
+  color: var(--color-foundation-green);
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+.bank-account-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+.bank-account-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 1.15fr) auto;
+  align-items: center;
+  gap: 20px;
+  padding: 19px;
+  border: 1px solid var(--color-gallery-line);
+  border-radius: 16px;
+  background: var(--color-gallery-mint);
+}
+.bank-account-meta > span {
+  display: inline-flex;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: var(--color-foundation-green);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+.bank-account-meta p {
+  margin-top: 7px;
+  color: var(--color-gallery-muted);
+  font-size: 12px;
+  line-height: 19px;
+}
+.bank-account-number {
+  display: grid;
+  gap: 5px;
+}
+.bank-account-number strong {
+  font-variant-numeric: tabular-nums;
+  font-size: 21px;
+  line-height: 28px;
+  letter-spacing: 1.2px;
+}
+.transfer-safety-note {
+  padding: 18px 20px;
+  margin-top: 22px;
+  border-left: 4px solid var(--color-foundation-gold);
+  background: #fff9e6;
+}
+.transfer-safety-note strong {
+  font-size: 13px;
+}
+.transfer-safety-note p {
+  margin-top: 6px;
+  color: #586159;
+  font-size: 12px;
+  line-height: 20px;
+}
+.donation-contact-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+.donation-contact-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--color-foundation-green);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+.donation-contact-actions a + a {
+  border: 1px solid var(--color-foundation-green);
+  background: white;
+  color: var(--color-foundation-green);
+}
+.donation-contact-actions img {
+  object-fit: contain;
+}
+.donation-contact-note {
+  margin-top: 16px;
+  color: var(--color-gallery-muted);
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+.donation-contact-note a {
+  color: var(--color-foundation-green);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.copy-announcement {
+  min-height: 20px;
+  margin-top: 4px;
+  color: var(--color-foundation-green);
+  font-size: 12px;
+  text-align: center;
+}
+@media (hover: hover) and (pointer: fine) {
+  .bank-identity button:hover,
+  .bank-account-card button:hover {
+    border-color: var(--color-foundation-green);
+    background: var(--color-foundation-green);
+    color: white;
+    transform: translateY(-1px);
+  }
+  .donation-contact-actions a:hover {
+    transform: translateY(-2px);
+    background: #084f0d;
+  }
+  .donation-contact-actions a + a:hover {
+    background: var(--color-gallery-mint);
+  }
+}
+@media (max-width: 1120px) {
+  .donation-container {
+    width: calc(100% - 96px);
+    grid-template-columns: minmax(0, 0.8fr) minmax(470px, 1.2fr);
+    gap: 48px;
+  }
+  .donation-introduction h2 {
+    font-size: 35px;
+  }
+  .bank-transfer-panel {
+    padding: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .donation-section {
+    padding: 55px 0 70px;
+  }
+  .donation-container {
+    width: calc(100% - 48px);
+    max-width: 650px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .donation-introduction {
+    padding-top: 0;
+  }
+  .donation-introduction h2 {
+    font-size: 32px;
+  }
+  .donation-introduction > p {
+    max-width: none;
+  }
+  .donate-desktop-break {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  .bank-transfer-panel {
+    padding: 28px 20px 24px;
+    border-radius: 18px;
+  }
+  .bank-identity {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .bank-account-card {
+    grid-template-columns: 1fr auto;
+    gap: 14px;
+  }
+  .bank-account-meta {
+    grid-column: 1 / -1;
+  }
+  .bank-account-number strong {
+    font-size: 19px;
+  }
+  .donation-contact-actions {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 360px) {
+  .donation-container {
+    width: calc(100% - 32px);
+  }
+  .bank-account-card {
+    grid-template-columns: 1fr;
+  }
+  .bank-account-card button {
+    justify-self: start;
+  }
+}

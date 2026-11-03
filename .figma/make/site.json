@@ -1,0 +1,11 @@
+{
+  "title": "Path to Blessings",
+  "description": "A polished landing page with intuitive navigation and a prominent hero section that helps visitors quickly understand the offering and find key information.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

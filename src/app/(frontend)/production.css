@@ -1,0 +1,311 @@
+/* Shared launch hardening: preserve the visual system while improving access and touch input. */
+#main-content:focus {
+  outline: none;
+}
+button:focus-visible,
+a:focus-visible {
+  box-shadow: 0 0 0 5px #053608;
+}
+.form-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.volunteer-fields {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+}
+.volunteer-field input,
+.volunteer-field textarea,
+.donation-field select,
+.donation-custom-input input {
+  font-size: 16px;
+}
+.volunteer-submit:disabled,
+.newsletter-input button:disabled {
+  cursor: not-allowed;
+  background: #607c62;
+  transform: none;
+}
+.volunteer-field input:disabled,
+.volunteer-field textarea:disabled,
+.newsletter-input input:disabled {
+  cursor: not-allowed;
+  background: #f6f8f5;
+  opacity: 1;
+}
+.volunteer-field input::placeholder,
+.volunteer-field textarea::placeholder,
+.newsletter-input input::placeholder {
+  color: #707a70;
+}
+.newsletter-notice {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 22px;
+  color: #d6dec8;
+}
+.newsletter > p {
+  white-space: normal;
+}
+.footer-socials a {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+}
+.footer-socials {
+  gap: 8px;
+}
+.pillar-card p {
+  color: #707070;
+}
+.projects-empty-state {
+  margin-top: 45px;
+  padding: 50px 40px;
+  text-align: center;
+  border: 1px solid #dbe5d8;
+  border-radius: 18px;
+  background: #f2fff5;
+}
+.projects-empty-state h3 {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+}
+.projects-empty-state p {
+  max-width: 630px;
+  margin: 20px auto 0;
+  color: #627263;
+  font-size: 16px;
+  line-height: 28px;
+}
+.projects-empty-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 28px;
+}
+.projects-mission-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #006408;
+  font-size: 15px;
+}
+.all-projects > .projects-page-container > .projects-empty-state {
+  margin-top: 60px;
+}
+.commitment-message {
+  font-size: 26px;
+  line-height: 39px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+.commitment-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 35px;
+}
+.commitment-signature strong {
+  font-weight: 600;
+}
+.testimonial-copy .button {
+  margin-top: 30px;
+  font-size: 15px;
+}
+.about-objective-stat > p {
+  font-size: clamp(20px, 2.2vw, 32px);
+}
+.about-objective-stat > span {
+  white-space: normal;
+  font-size: clamp(11px, 1.1vw, 16px);
+  line-height: 1.5;
+}
+.site-recovery-page {
+  min-height: 80dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 65px 24px;
+  background: #f2fff5;
+  color: #202321;
+  text-align: center;
+}
+.site-recovery-page h1 {
+  font-family: var(--font-display);
+  font-size: clamp(35px, 5vw, 55px);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+}
+.site-recovery-page > p {
+  max-width: 550px;
+  font-size: 16px;
+  line-height: 28px;
+  color: #627263;
+}
+.site-recovery-page .site-recovery-code {
+  color: #006408;
+  font-weight: 600;
+}
+.site-recovery-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+}
+@media (max-width: 1100px) {
+  .commitment-message {
+    font-size: 22px;
+    line-height: 34px;
+  }
+}
+@media (max-width: 950px) {
+  .site-header {
+    position: relative;
+    z-index: 20;
+    width: calc(100% - 36px);
+    height: 90px;
+    padding-inline: 24px;
+    gap: 18px;
+  }
+  .brand img {
+    width: 90px;
+    height: 60px;
+  }
+  .header-volunteer {
+    display: none;
+  }
+  .header-actions {
+    margin-left: auto;
+  }
+  .header-actions .button {
+    min-width: 136px;
+    min-height: 45px;
+    padding-inline: 18px;
+    font-size: 14px;
+  }
+  .menu-toggle {
+    display: flex;
+    order: 3;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+  .menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: #fffef4;
+  }
+  .primary-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    margin: 0;
+    padding: 14px 20px;
+    max-height: calc(100dvh - 155px);
+    overflow-y: auto;
+    border: 1px solid #89a778;
+    border-radius: 24px;
+    background: #28682d;
+    box-shadow: 0 16px 36px #00370666;
+  }
+  .primary-nav.is-open {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .primary-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    width: 100%;
+  }
+  .primary-nav .active::after {
+    left: 0;
+    right: auto;
+    width: 58px;
+    bottom: 3px;
+  }
+}
+@media (max-width: 800px) {
+  .footer-nav {
+    gap: 12px;
+  }
+  .footer-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .hero-copy h1 {
+    font-size: clamp(28px, 7.3vw, 49px);
+  }
+  .heading-first {
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+  .heading-second {
+    white-space: normal;
+  }
+  .hero-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .projects-empty-state {
+    padding: 35px 22px;
+    margin-top: 30px;
+  }
+  .projects-empty-state h3 {
+    font-size: 26px;
+  }
+  .projects-empty-actions {
+    gap: 12px;
+    flex-direction: column;
+  }
+  .all-projects > .projects-page-container > .projects-empty-state {
+    margin-top: 40px;
+  }
+  .commitment-message {
+    font-size: 21px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 500px) {
+  .site-header {
+    padding-inline: 14px;
+    gap: 8px;
+  }
+  .brand img {
+    width: 78px;
+    height: 52px;
+  }
+  .header-actions {
+    flex-shrink: 0;
+  }
+  .header-actions .button {
+    min-width: 110px;
+    padding-inline: 12px;
+    font-size: 13px;
+  }
+}
