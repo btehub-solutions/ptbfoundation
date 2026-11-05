@@ -8,6 +8,7 @@
 - **Minimal tool calls.** Read only the files you need. Do not scan the whole codebase when you can target the relevant file directly.
 - **Batch writes.** Write all independent files in a single response. Never write files one at a time when they are unrelated.
 - **No redundant checks.** Do not re-read a file you just wrote. Trust the write and move on.
+- **Never run unnecessary status verifications.** Do not run curl, Invoke-WebRequest, or extra status checks after edits unless explicitly commanded by the user. Complete the edits and stop immediately.
 - **Short responses.** Confirmations must be 3–5 lines max unless the user asks for detail.
 
 React + Next.js + Payload + Tailwind CSS project running inside Figma Make.
@@ -17,30 +18,6 @@ reread it before opening source. Always load the `payload-framework` skill.
 Load `nextjs-docs` when the task involves routing, pages,
 components, caching, images, or metadata, not for schema-only, data-only, or style-only changes.
 Load `payload-content` before changing data.
-
-For frontend work, keep a **Verify production delivery** todo pending until all
-of these are done:
-
-- Preview every requested route and fix every runtime or build error. Server
-  Components cannot contain event handlers; use CSS interaction or a Client
-  Component boundary.
-- When a Client Component calls a Server Action inside `useTransition`, keep
-  `revalidatePath` out of the action. Return a serializable result and call
-  `router.refresh()` in the client after success.
-- Run `figma make verify-deploy`, inspect its production route table, and visit
-  every generated public route. `verify-bootstrap` and source inspection are
-  not substitutes.
-- Keep fixed pages static. Choose one content lifecycle before implementing
-  dynamic routes; do not combine these contracts:
-  - For an intentional build-time snapshot, use build-time reads without
-    on-write revalidation and warn that Admin edits require another **Publish**.
-  - For content that must stay fresh after Publish, add cached list/detail reads
-    and collection hooks immediately after the schema, before building UI.
-    Invalidate the list plus both the previous and current route keys on every
-    write (for example, `previousDoc.slug` and `doc.slug` after a slug change),
-    and invalidate affected pages when related media changes. Then prove a
-    unique published edit appears in a fresh production request. A revalidation
-    interval is not a substitute for these hooks.
 
 For page-level static generation or ISR, do not complete the final delivery
 todo while `verify-deploy` marks a requested public route as `ƒ (Dynamic)`.

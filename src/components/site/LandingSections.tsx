@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { getContactEmail, getSocialLinks } from '@/lib/public-site-config'
 import NewsletterForm from './NewsletterForm'
-import ProjectsEmptyState from './ProjectsEmptyState'
+import FeaturedProjectsCarousel from './FeaturedProjectsCarousel'
 
 export function Chevron() {
   return (
@@ -128,7 +128,7 @@ function FeaturedProjects() {
             See all projects <Chevron />
           </Link>
         </div>
-        <ProjectsEmptyState />
+        <FeaturedProjectsCarousel />
       </div>
     </section>
   )

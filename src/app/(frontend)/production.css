@@ -309,3 +309,37 @@ a:focus-visible {
     font-size: 13px;
   }
 }
+
+/* Gallery category navigation */
+.gallery-category-header {
+  margin-bottom: 8px;
+}
+.gallery-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: #087012;
+  margin-bottom: 16px;
+  padding: 6px 0;
+}
+.gallery-back-button:hover {
+  text-decoration: underline;
+}
+
+.gallery-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.gallery-drive-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: auto;
+  padding: 10px 20px;
+  font-size: 15px;
+}

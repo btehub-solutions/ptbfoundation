@@ -13,6 +13,7 @@ export const publicSiteConfig = {
   facebookURL: '',
   whatsappURL: 'https://wa.me/2348086854143',
   whatsappDisplay: '0808 685 4143',
+  googleDriveArchiveURL: 'https://drive.google.com/drive/folders/1_ik3ohifz_KfYGOkByaWPpDUzA8dZAaM',
   tiktokURL: 'https://www.tiktok.com/@pathtoblessings1',
   donationAccounts: [
     { currency: 'Nigerian Naira', code: 'NGN', accountNumber: '0019856463' },

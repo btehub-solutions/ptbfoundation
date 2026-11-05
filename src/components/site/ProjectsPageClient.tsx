@@ -1,5 +1,5 @@
 import { Footer } from './LandingSections'
-import ProjectsEmptyState from './ProjectsEmptyState'
+import ProjectsGrid from './ProjectsGrid'
 import { SiteHeader } from './SiteChrome'
 
 export default function ProjectsPage() {
@@ -27,7 +27,7 @@ export default function ProjectsPage() {
               <span>OUR PROJECTS</span>
               <h2 id="all-projects-heading">Our Work in Action</h2>
             </div>
-            <ProjectsEmptyState />
+            <ProjectsGrid />
           </div>
         </section>
       </main>
