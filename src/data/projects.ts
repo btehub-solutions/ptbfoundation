@@ -17,7 +17,7 @@ export const projects: Project[] = [
     year: 2024,
     description:
       '400 students - Distributed educational materials and inspired learning.',
-    image: '/assets/gallery/education/whiteboard.jpg',
+    image: '/assets/gallery/launch/launch-pupils-celebration.webp',
   },
   {
     id: 'correctional-facility-visit-nov-2024',
