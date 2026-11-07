@@ -15,7 +15,11 @@ export default function NewsletterForm() {
     if (!form.reportValidity()) return
     const data = new FormData(form)
     const sent = await submit(endpoint, {
+      _subject: 'New Newsletter Subscriber - Path to Blessings',
+      form_type: 'Newsletter Subscription (Footer)',
+      subscriber_email: String(data.get('email') ?? '').trim(),
       email: String(data.get('email') ?? '').trim(),
+      subscribed_at: new Date().toISOString(),
       _gotcha: String(data.get('_gotcha') ?? ''),
     })
     if (sent) form.reset()

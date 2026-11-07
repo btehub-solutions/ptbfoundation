@@ -17,12 +17,17 @@ export default function VolunteerPageClient() {
     const form = event.currentTarget
     if (!form.reportValidity()) return
     const data = new FormData(form)
+    const applicantName = String(data.get('name') ?? '').trim()
     const sent = await submit(endpoint, {
-      name: String(data.get('name') ?? '').trim(),
+      _subject: `New Volunteer Application: ${applicantName || 'Volunteer'} - Path to Blessings`,
+      form_type: 'Volunteer Application Form (/volunteer)',
+      applicant_name: applicantName,
+      applicant_email: String(data.get('email') ?? '').trim(),
       email: String(data.get('email') ?? '').trim(),
       phone: String(data.get('phone') ?? '').trim(),
       location: String(data.get('location') ?? '').trim(),
       message: String(data.get('message') ?? '').trim(),
+      submitted_at: new Date().toISOString(),
       _gotcha: String(data.get('_gotcha') ?? ''),
     })
     if (sent) form.reset()
