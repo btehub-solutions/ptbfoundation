@@ -27,7 +27,7 @@ export const projects: Project[] = [
     year: 2024,
     description:
       '600 inmates - Welfare support and motivational rehabilitation sessions.',
-    image: '',
+    image: '/assets/gallery/outreach/correctional-facility-visit.webp',
   },
   {
     id: 'media-awareness-special-people-dec-2024',
