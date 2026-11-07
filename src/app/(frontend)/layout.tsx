@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { BodyCustomCode, renderHeadCustomCode } from '@/lib/make-custom-code'
 import { makeSiteSettings, sanitizeHtmlAttribute } from '@/lib/make-site-settings'
@@ -7,6 +7,14 @@ import { createPageMetadata, siteName, siteURL } from '@/lib/site-metadata'
 import { publicSiteConfig } from '@/lib/public-site-config'
 import MotionEnhancements from '@/components/site/MotionEnhancements'
 import './styles.css'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#053d1f',
+  viewportFit: 'cover',
+}
 
 const defaultTitle = siteName
 const title = makeSiteSettings.title ?? defaultTitle
