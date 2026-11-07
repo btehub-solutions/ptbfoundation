@@ -246,46 +246,86 @@
 }
 .about-trustee > img {
   object-fit: cover;
+  object-position: center top;
   filter: grayscale(1);
-  transition: filter 300ms;
+  transition: filter 300ms, object-position 300ms;
 }
 .about-trustee.is-active > img {
   filter: grayscale(0);
+  object-position: center 15%;
 }
 .about-trustee:focus-visible {
   outline-offset: 5px;
 }
 .about-trustee-caption {
   position: absolute;
-  left: 32px;
-  right: 32px;
-  bottom: 40px;
-  min-width: 0;
-  border-radius: 20px;
-  padding: 24px;
+  left: 24px;
+  bottom: 28px;
+  right: auto;
+  min-width: 240px;
+  max-width: calc(100% - 48px);
+  border-radius: 18px;
+  padding: 18px 24px;
   background: #053608;
   color: var(--about-paper);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 180ms;
+  transform: translateY(6px);
+  transition: opacity 240ms ease, transform 240ms ease;
+  z-index: 5;
 }
 .about-trustee.is-active .about-trustee-caption {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
 }
 .about-trustee-name {
   display: block;
-  font-size: 28px;
-  line-height: 34px;
-  letter-spacing: -0.9px;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.6px;
   white-space: nowrap;
   font-weight: 500;
 }
 .about-trustee-role {
   display: block;
-  margin-top: 10px;
-  font-size: 13px;
-  line-height: 18px;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #a4d4a8;
+}
+.about-trustee-pointer {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.9) translateY(4px);
+  transition: opacity 280ms ease, transform 280ms cubic-bezier(0.2, 0.6, 0.3, 1);
+}
+.about-trustee.is-active .about-trustee-pointer {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+.about-trustee-cursor {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  flex-shrink: 0;
+}
+.about-trustee-tag {
+  background: #053608;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 5px 9px;
+  border-radius: 6px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 @media (max-width: 1399px) {
   .about-container {

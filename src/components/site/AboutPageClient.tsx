@@ -22,30 +22,35 @@ const trustees = [
     name: 'Ogedengbe Nimotallahi',
     role: 'FOUNDER',
     alt: 'Ogedengbe Nimotallahi smiling while working on a laptop',
+    pointer: { top: '48%', left: '56%' },
   },
   {
-    image: 'trustee-2',
-    name: 'Board of Trustees',
-    role: 'TRUSTEE',
-    alt: 'A trustee smiling at a desk',
+    image: 'trustee-2-color',
+    name: 'Leshi Raolat',
+    role: 'MEMBER',
+    alt: 'Leshi Raolat smiling at a desk',
+    pointer: { top: '18%', right: '16%' },
   },
   {
     image: 'trustee-3',
     name: 'Board of Trustees',
-    role: 'TRUSTEE',
+    role: 'MEMBER',
     alt: 'A trustee in a patterned blouse',
+    pointer: { top: '28%', right: '16%' },
   },
   {
     image: 'trustee-4',
     name: 'Board of Trustees',
-    role: 'TRUSTEE',
+    role: 'MEMBER',
     alt: 'A trustee in a suit holding a tablet',
+    pointer: { top: '24%', right: '16%' },
   },
   {
-    image: 'trustee-5',
-    name: 'Board of Trustees',
-    role: 'TRUSTEE',
-    alt: 'A trustee in a shirt and tie speaking on the phone',
+    image: 'trustee-5-color',
+    name: 'Sekinat Oguntade',
+    role: 'MEMBER',
+    alt: 'Sekinat Oguntade speaking on the phone',
+    pointer: { top: '52%', right: '14%' },
   },
 ]
 
@@ -228,14 +233,8 @@ function BoardOfTrustees() {
                 memberButtons.current[index] = element
               }}
               className={`about-trustee ${active === index ? 'is-active' : ''}`}
-              aria-label={
-                index === 0
-                  ? 'View Ogedengbe Nimotallahi, Founder'
-                  : `View trustee portrait ${index + 1}`
-              }
+              aria-label={`View ${trustee.name}, ${trustee.role}`}
               aria-pressed={active === index}
-              onMouseEnter={() => setActive(index)}
-              onFocus={() => setActive(index)}
               onClick={() => setActive(index)}
               onKeyDown={(event) => {
                 if (event.key === 'ArrowRight') {
@@ -264,6 +263,29 @@ function BoardOfTrustees() {
                   index === 0 ? '(max-width: 700px) 86vw, 40vw' : '(max-width: 700px) 86vw, 25vw'
                 }
               />
+              <div
+                className="about-trustee-pointer"
+                style={trustee.pointer}
+                aria-hidden={active !== index}
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="about-trustee-cursor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 3l7.5 18 2.5-7 7-2.5L3 3z"
+                    fill="#f59e0b"
+                    stroke="#ffffff"
+                    strokeWidth="1.5"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span className="about-trustee-tag">{trustee.name}</span>
+              </div>
               <span className="about-trustee-caption" aria-hidden={active !== index}>
                 <span className="about-trustee-name">{trustee.name}</span>
                 <span className="about-trustee-role">{trustee.role}</span>
