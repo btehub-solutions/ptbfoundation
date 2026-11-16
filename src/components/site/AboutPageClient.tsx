@@ -263,29 +263,6 @@ function BoardOfTrustees() {
                   index === 0 ? '(max-width: 700px) 86vw, 40vw' : '(max-width: 700px) 86vw, 25vw'
                 }
               />
-              <div
-                className="about-trustee-pointer"
-                style={trustee.pointer}
-                aria-hidden={active !== index}
-              >
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="about-trustee-cursor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M3 3l7.5 18 2.5-7 7-2.5L3 3z"
-                    fill="#f59e0b"
-                    stroke="#ffffff"
-                    strokeWidth="1.5"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <span className="about-trustee-tag">{trustee.name}</span>
-              </div>
               <span className="about-trustee-caption" aria-hidden={active !== index}>
                 <span className="about-trustee-name">{trustee.name}</span>
                 <span className="about-trustee-role">{trustee.role}</span>
