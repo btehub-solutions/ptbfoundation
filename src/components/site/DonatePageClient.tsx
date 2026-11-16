@@ -142,7 +142,7 @@ export default function DonatePageClient() {
                   </a>
                 )}
                 <a href={`mailto:${publicSiteConfig.contactEmail}?subject=Donation%20enquiry`}>
-                  <img src="/assets/email.png" alt="" width="24" height="23" />
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.8"/><path d="M2 7l10 7 10-7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   Email the foundation
                 </a>
               </div>

@@ -197,6 +197,24 @@ const categories: Category[] = [
         title: 'Stakeholder & dignitary engagement',
         alt: 'Leadership engagement with community partners and institutional stakeholders',
       },
+      {
+        id: 'out-11',
+        src: '/assets/gallery/outreach/vision-innovation-team.webp',
+        title: 'Vision for Innovation team',
+        alt: 'Three volunteers wearing Vision for Innovation branded shirts and caps posing together',
+      },
+      {
+        id: 'out-12',
+        src: '/assets/gallery/outreach/government-leadership-visit-2.webp',
+        title: 'Government partnership engagement',
+        alt: 'Foundation representatives meeting with government leadership in official setting',
+      },
+      {
+        id: 'out-13',
+        src: '/assets/gallery/outreach/volunteers-fieldwork.webp',
+        title: 'Volunteers on field assignment',
+        alt: 'Two Path to Blessings volunteers in branded gear standing on a rural road during fieldwork',
+      },
     ],
   },
   {

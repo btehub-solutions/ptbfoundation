@@ -348,7 +348,7 @@ export function Footer() {
               ))}
               {email && (
                 <a href={`mailto:${email}`} aria-label="Email Path to Blessings">
-                  <img src="/assets/email.png" width="27" height="25" alt="" loading="lazy" />
+                  <svg width="27" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.8"/><path d="M2 7l10 7 10-7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </a>
               )}
             </div>
