@@ -13,7 +13,7 @@ export const publicRoutes = [
 ] as const
 
 export const siteURL = new URL(
-  publicSiteConfig.siteURL || process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  publicSiteConfig.siteURL || process.env.NEXT_PUBLIC_SITE_URL || 'https://www.ptbglobal.org',
 )
 
 export const defaultKeywords = [

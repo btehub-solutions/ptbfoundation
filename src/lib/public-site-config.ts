@@ -3,7 +3,7 @@
  * Formspree endpoints are public form destinations, not private credentials.
  */
 export const publicSiteConfig = {
-  siteURL: '',
+  siteURL: 'https://www.ptbglobal.org',
   contactEmail: 'pathtoblessingsfoundation@gmail.com',
   clarificationPhone: '+2349153839229',
   clarificationPhoneDisplay: '0915 383 9229',
