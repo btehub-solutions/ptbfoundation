@@ -99,16 +99,6 @@ export const projects: Project[] = [
       '35 vulnerable individuals - Feeding outreach executed on behalf of a UK donor.',
     image: '/assets/gallery/special-people/group-feeding.jpg',
   },
-  {
-    id: 'mapama-national-convention-nov-2025',
-    title: 'Supported MAPAMA National Convention 2025',
-    date: 'Nov 15 & 16, 2025',
-    month: 'November',
-    year: 2025,
-    description:
-      'Our volunteers contributed to graphics design, handling media support, including capturing event highlights, live streaming, interviews, and documentation to enhance the visibility of the convention.',
-    image: '/assets/gallery/launch/launch-duo.jpg',
-  },
 ]
 
 export interface DateGroup {

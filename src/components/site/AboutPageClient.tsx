@@ -104,17 +104,24 @@ function OurStory() {
           <SectionLabel>ABOUT US</SectionLabel>
           <h2 id="about-story-heading">Our Story</h2>
           <p>
-            A Nigeria-based Non-Governmental Organization that seeks to stand as a guiding light of
-            hope in a world filled with challenges, focusing our efforts on four pillars that define
-            our mission: clean water and sanitation, climate action, good health and well-being and
-            the pursuit of zero poverty.
+            Introducing and welcoming you all to Path to Blessings Charity Foundation.
           </p>
-          <p>Our motto is “After Every Hardship comes ease.”</p>
+          <p>
+            We are a non-profit organization focused on creating lasting impact through education,
+            innovation, health support, and community development.
+          </p>
+          <p>
+            At Path to Blessings, we believe real change happens when compassion meets technology and
+            purpose. Our mission is to support young minds, uplift underserved communities, and
+            promote sustainable growth through meaningful initiatives.
+          </p>
+          <p>
+            Guided by integrity, accountability, and service, we work with schools, volunteers, and
+            partners to improve learning outcomes and overall well-being.
+          </p>
           <p className="about-story-second">
-            Through dedicated initiatives, we are working to ensure that clean water is not a
-            privilege but a fundamental right, that climate action is not a choice but a
-            responsibility, that healthcare gaps are bridged and that the shadows of poverty are
-            replaced with the light of opportunity.
+            This is more than an organization, it’s a journey of hope, empowerment, and
+            transformation. Welcome to Path to Blessings.
           </p>
         </div>
       </div>
@@ -130,8 +137,8 @@ function MissionVision() {
           <SectionLabel>GUIDING MISSION</SectionLabel>
           <h2>Our Mission</h2>
           <p>
-            To empower public school students through innovative, tech-driven and charitable
-            educational programs.
+            To empower public school students through innovative, tech-driven, and charitable
+            educational programs
           </p>
         </div>
         <Image
@@ -146,8 +153,8 @@ function MissionVision() {
           <SectionLabel>GUIDING VISION</SectionLabel>
           <h2>Our Vision</h2>
           <p>
-            To merge the power of technology with the heart of charity for sustainable educational
-            impact
+            To merge the power of technology with the heart of charity to create sustainable
+            education impacts
           </p>
         </div>
       </div>
